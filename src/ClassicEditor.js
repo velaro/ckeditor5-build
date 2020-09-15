@@ -19,6 +19,7 @@ import Link from "@ckeditor/ckeditor5-link/src/link";
 import List from "@ckeditor/ckeditor5-list/src/list";
 import MediaEmbed from "@ckeditor/ckeditor5-media-embed/src/mediaembed";
 import Paragraph from "@ckeditor/ckeditor5-paragraph/src/paragraph";
+import Alignment from "@ckeditor/ckeditor5-alignment/src/alignment";
 import PasteFromOffice from "@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice";
 import Table from "@ckeditor/ckeditor5-table/src/table";
 import TableToolbar from "@ckeditor/ckeditor5-table/src/tabletoolbar";
@@ -50,6 +51,7 @@ ClassicEditor.builtinPlugins = [
   List,
   MediaEmbed,
   Paragraph,
+  Alignment,
   PasteFromOffice,
   Table,
   TableToolbar,
@@ -63,6 +65,8 @@ ClassicEditor.defaultConfig = {
   toolbar: {
     items: [
       "heading",
+      "|",
+      "alignment",
       "fontFamily",
       "fontColor",
       "fontBackgroundColor",
@@ -90,7 +94,7 @@ ClassicEditor.defaultConfig = {
       "imageStyle:full",
       "imageStyle:alignRight",
       "|",
-      "linkImage"
+      "linkImage",
     ],
     styles: [
       // This option is equal to a situation where no style is applied.
@@ -100,8 +104,8 @@ ClassicEditor.defaultConfig = {
       "alignLeft",
 
       // This represents an image aligned to the right.
-      "alignRight"
-    ]
+      "alignRight",
+    ],
   },
   table: {
     contentToolbar: ["tableColumn", "tableRow", "mergeTableCells"],
