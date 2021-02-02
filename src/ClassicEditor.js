@@ -26,6 +26,7 @@ import TableToolbar from "@ckeditor/ckeditor5-table/src/tabletoolbar";
 import TextTransformation from "@ckeditor/ckeditor5-typing/src/texttransformation";
 import Font from "@ckeditor/ckeditor5-font/src/font";
 import ChatMacros from "./plugins/ChatMacros";
+import Storage from "./plugins/Storage";
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -58,6 +59,7 @@ ClassicEditor.builtinPlugins = [
   TextTransformation,
   Font,
   ChatMacros,
+  Storage,
 ];
 
 // Editor configuration.
@@ -79,6 +81,7 @@ ClassicEditor.defaultConfig = {
       "|",
       // "chatMacros",
       // "imageUpload",
+      // "storage",
       "blockQuote",
       "insertTable",
       "mediaEmbed",
@@ -112,4 +115,9 @@ ClassicEditor.defaultConfig = {
   },
   // This value must be kept in sync with the language defined in webpack.config.js.
   language: "en",
+  // storage: {
+  //   onExecute(callback) {
+  //     callback({ url: "https://example.com" });
+  //   },
+  // },
 };
