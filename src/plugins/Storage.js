@@ -7,6 +7,10 @@ export default class Storage extends Plugin {
     const editor = this.editor;
     const config = editor.config.get("storage");
 
+    if (!config) {
+      throw new Error("config.storage is missing.");
+    }
+
     editor.ui.componentFactory.add("storage", (locale) => {
       const view = new ButtonView(locale);
 
@@ -22,7 +26,7 @@ export default class Storage extends Plugin {
         }
 
         editor.model.change((writer) => {
-          const link = writer.createText("sometext");
+          const link = writer.createText(payload.text || payload.url);
           writer.setAttribute("linkHref", payload.url, link);
           editor.model.insertContent(link, editor.model.document.selection);
         });
@@ -30,7 +34,7 @@ export default class Storage extends Plugin {
 
       view.on("execute", () => {
         if (!config.onExecute) {
-          throw new Error("config.storage.onExecute(callback) must be set.");
+          throw new Error("config.storage.onExecute(callback) is missing.");
         }
 
         config.onExecute(callback);
