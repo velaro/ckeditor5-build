@@ -117,7 +117,7 @@ ClassicEditor.defaultConfig = {
   language: "en",
   // storage: {
   //   onExecute(callback) {
-  //     callback({ url: "https://example.com" });
+  //     callback({ url: "https://example.com/foo.png" });
   //   },
   // },
 };
