@@ -27,6 +27,7 @@ import TextTransformation from "@ckeditor/ckeditor5-typing/src/texttransformatio
 import Font from "@ckeditor/ckeditor5-font/src/font";
 import ChatMacros from "./plugins/ChatMacros";
 import Storage from "./plugins/Storage";
+import InternalLink from "./plugins/InternalLink";
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -60,6 +61,7 @@ ClassicEditor.builtinPlugins = [
   Font,
   ChatMacros,
   Storage,
+  InternalLink,
 ];
 
 // Editor configuration.
@@ -82,6 +84,7 @@ ClassicEditor.defaultConfig = {
       // "chatMacros",
       // "imageUpload",
       // "storage",
+      // "internalLink",
       "blockQuote",
       "insertTable",
       "mediaEmbed",
@@ -116,6 +119,11 @@ ClassicEditor.defaultConfig = {
   // This value must be kept in sync with the language defined in webpack.config.js.
   language: "en",
   // storage: {
+  //   onExecute(callback) {
+  //     callback({ url: "https://example.com/foo.png" });
+  //   },
+  // },
+  // internalLink: {
   //   onExecute(callback) {
   //     callback({ url: "https://example.com/foo.png" });
   //   },
