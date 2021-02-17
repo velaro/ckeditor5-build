@@ -1,6 +1,6 @@
 {
   "name": "@velaro/ckeditor5-build",
-  "version": "20.0.0",
+  "version": "20.1.0",
   "description": "Compiled versions of ckeditor5 for use in Velaro Live Chat",
   "keywords": [
     "ckeditor5-build",
