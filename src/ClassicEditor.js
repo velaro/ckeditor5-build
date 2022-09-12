@@ -28,6 +28,7 @@ import Font from "@ckeditor/ckeditor5-font/src/font";
 import ChatMacros from "./plugins/ChatMacros";
 import Storage from "./plugins/Storage";
 import InternalLink from "./plugins/InternalLink";
+import CloudServices from "@ckeditor/ckeditor5-cloud-services/src/cloudservices";
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -41,6 +42,7 @@ ClassicEditor.builtinPlugins = [
   BlockQuote,
   CKFinder,
   EasyImage,
+  CloudServices,
   Heading,
   Image,
   ImageCaption,
